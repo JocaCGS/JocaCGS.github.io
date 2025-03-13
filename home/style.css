@@ -46,6 +46,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: flex;
 }
 
 .fotorosto {
@@ -53,3 +54,19 @@ footer {
     height: 500px;
     border-radius: 50%;
 }
+
+.btn {
+    display: inline-block; /* Mantém como um botão */
+    transition: 0.3s ease-in-out;
+}
+
+.atv {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none; /* Remove sublinhado */
+    background-color: #7d3ff0; /* Azul */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: white;
+    border: 2px solid #7d3ff0;
+  }
