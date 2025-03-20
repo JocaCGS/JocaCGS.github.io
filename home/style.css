@@ -1,72 +1,93 @@
-/* Aplicando a fonte Poppins */
+
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /*f5f5f5*/
+  color: #333;
+  text-align: center;
 }
 
-/* Estilizando o cabeçalho */
+/* Cabeçalho */
 header {
-    background-color: #7d3ff0;
-    color: white;
-    padding: 14px;
+  background-color: #8f53ff;
+  color: white;
+  padding: 14px;
+  display: flex;
+  justify-content: flex-end; /* Alinha o select para a direita */
+  padding-right: 20px;
 }
 
-h1 {
-    font-size: 2.5em;
-    font-weight: 700;
+/* Botão do menu */
+.atv {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  color: #181818;
+  border: 2px solid #f5f5f5;
 }
 
-p {
-    font-size: 1.2em;
-    font-weight: 300;
-}
-
-/* Seções do conteúdo */
+/* Seção principal */
 main {
-    padding: 20px;
+  padding: 20px;
+}
+/*
+section {
+  background: white;
+  padding: 30px;
+  margin: 160px auto;
+  border-radius: 10px;
+  max-width: 1000px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+*/
+
+/* Imagem de perfil */
+.fotorosto {
+  width: 100%;
+  max-width:370px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
-section {
-    background: white;
-    padding: 10px;
-    margin:130px auto;
-    border-radius: 10px;
-    max-width: 1000px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+/* Texto ao lado da imagem */
+.texto {
+  max-width: 500px;
+  text-align: left;
+  padding-left: 70px;
 }
 
 /* Rodapé */
+/* Rodapé */
 footer {
-    background-color: #7d3ff0;
-    color: white;
-    position: fixed;
-    bottom: 0;
+  background-color: #8f53ff;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+
+.imgbackground {
+    margin-right: 10%;
     width: 100%;
-    display: flex;
-}
-
-.fotorosto {
-    width: 450px;
-    height: 500px;
+    max-width:370px;
+    height: auto;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block; /* Mantém como um botão */
-    transition: 0.3s ease-in-out;
+table {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 150px;
 }
 
-.atv {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none; /* Remove sublinhado */
-    background-color: #7d3ff0; /* Azul */
-    border-radius: 5px; /* Bordas arredondadas */
-    color: white;
-    border: 2px solid #7d3ff0;
-  }
