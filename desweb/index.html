@@ -1,22 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>Redes</title>
-    <meta charset="utf-8">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JocaCGS - Des. Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-        <h1>Desenvolvimento Web</h1>
-    </header>
-    <br><br><br>
-    <p>
-      <a class="texto" href="https://jocacgs.github.io/curriculumatv1dw/">Atividade 1</a>
-    </p>
-    <br>
-    <p>
-      <a class="texto" href="https://jocacgs.github.io/atv2dw/home/">Atividade 2</a>
-    </p>
-  </body>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+<div id="menu">
+    <p id="texthome">JocaCGS</p>
+    <h1 id="texthome">Desenvolvimento Web</h1>
+    <button id="homebutton" value="https://jocacgs.github.io/home/" onclick="gohome()">
+        <span class="material-symbols-outlined">
+            home
+        </span>
+    </button>
+    <h3>Atividade 1</h3>
+    <a href="https://jocacgs.github.io/curriculumatv1dw/">Ir para a atividade</a>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/curriculumatv1dw/')">Visualizar</button>
+    <br><br>
+    <h3>Atividade 2</h3>
+    <a href="https://jocacgs.github.io/atv2dw/home/">Ir para a atividade</a>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/atv2dw/home/')">Visualizar</button>
+</div>
+
+<div style="margin: auto;">
+    <p style="font-size: 25px; margin-left: 500px;">Visualizador</p>
+    <iframe id="viewer" src=""></iframe>
+</div>
+
+<script>
+    function gohome() {
+        let home = document.getElementById("homebutton").value;
+        if (home) {
+            window.location.href = home;
+        }
+    }
+    function updateViewer(url) {
+        document.getElementById('viewer').src = url;
+    }
+</script>
+
+</body>
 </html>

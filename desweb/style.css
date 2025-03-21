@@ -1,21 +1,49 @@
-html, body {
-  margin: 0;
-  padding: 0;
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+#menu {
+    width: 20%;
+    background: #f0f0f0;
+    padding: 10px;
+}
+#viewer {
+    border-radius: 5%;
+    border-width: 5px;
+    border-color: rgb(185, 185, 185);
+    border-style: dashed;
+    width: 120vh;
+    height: 80vh;
+    margin: auto;
+}
+#homebutton {
+    margin-top: 10px;
+    width: 10%;
+    padding: 2px;
+    margin-bottom: 70px;
+    border: none;
+}
+#selectionbuttons {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: gray;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 14px;
-  background-color: #f5f5f5; /*f5f5f5*/
-  color: #333;
-  text-align: center;
+#texthome {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
 }
 
-.texto {
-  max-width: 1000px;
-  text-align: left;
-  padding-left: 70px;
-  text-decoration: none;
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
-
