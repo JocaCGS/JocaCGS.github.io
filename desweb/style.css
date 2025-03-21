@@ -48,3 +48,7 @@ body {
 button:hover {
     background-color: lightgrey;
 }
+
+button:active {
+    background-color: rgb(182, 182, 182);
+}
