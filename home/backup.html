@@ -1,101 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>Site do Joca</title>
-    <meta charset="utf-8">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <style>
-    .button {
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 15px;
-      border: none;
+    <title>Site do Joca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <!-- <select class="atv" id="opcao" onchange="redirecionar()">
+        <option value="">Escolha uma Matéria</option>
+        <option value="https://jocacgs.github.io/desweb/">Desenvolvimento Web</option>
+        <option value="https://jocacgs.github.io/redes/">Introdução à Redes</option>
+    </select> -->
+    <div class="iconeEtexto"">
+        <img class="imgicone" src="icone.png" alt="iconejcgs">
+        JocaCGS
+    </div>
+    <div style="margin-left: 30%; margin-top: 15px;">
+        
+        <a id="headeroptions" href="">HOME</a>
+        <a id="headeroptions" href="">MATERIAS</a>
+        <a id="headeroptions" href="">SOBRE</a>
+        <a id="headeroptions" href="">CONTATO</a>
+        <a id="headeroptions" href=""></a>
+    </div>
+</header>
+
+<section class="section1">
+    <img class="foto1background" src="foto1jocacgs.png" alt="primeira foto fundo">
+    <div class="texto-overlay">
+        <h1 style="font-size: 160px;">JOCACGS</h1>
+        <hr style="margin-top: -120px; ">
+    </div>
+</section>
+
+
+<section class="section2">
+    <div>
+        <img style="margin-right: 10px;" class="monitoricon" src="monitor-icon.png" alt="monitor de computador">
+        <img style="margin-left: 10px;" class="monitoricon" src="bookpen.png" alt="livro e caneta">
+        <table style="margin-top: -150px;">
+            <tr>
+                <td style="padding-right: 80px;">Programador</td>
+                <td style="padding-left: 27px;">Estudante</td>
+            </tr>
+        </table>
+    </div>
+    <h1 style="margin-top: -10px; font-size: 70px;">BEM VINDO</h1>
+    <p style="margin-top: -50px; font-size: 15px;">Seja bem-vindo ao site do JocaCGS. Nesse site, você pode ver mais sobre mim, o que faço e o que estudo.</p>
+</section>
+
+<section class="section3">
+    <img class="foto1background" src="foto2between.png" alt="fotoponte">
+</section>
+
+<section class="section4">
+    <div>
+        <img style="margin-right: 10px;" class="projectsmonitor" src="projectsmonitor.png" alt="monitor de computador">
+    </div>
+    <h1 style="margin-top: -10px; font-size: 70px;">PROJETOS</h1>
+    <p style="margin-top: -50px; font-size: 15px;">Ainda estou estudando, portanto nao trabalhei em projetos muito grandes ou legais ainda, mas tem um que fiz baseado em um trabalho escolar chamado Trips Planner, um planejador de viagens que foi programado em Java.</p>
+</section>
+
+<section class="section5">
+    <img class="foto1background" src="foto3between.png" alt="foto 3 entre informacoes">
+</section>
+
+<section class="section6">
+    <h2 style="font-size: 50px;">SOBRE MIM</h2>
+    <p style="max-width: 700px; margin-left: 460px; margin-top: -30px;">Meu nome é Joaquim Colini, sou estudante de informática no Instituto Federal do Paraná (IFPR). Estou no 3º (terceiro) ano do Ensino Médio (EMI) e tenho 17 anos. Busco aprender mais sempre que for divertido.</p>
+    <img style="margin-top: 10px;" class="fotorosto" src="foto rosto2.png" alt="foto rosto jocacgs">
+</section>
+
+<section class="section7">
+    <img class="foto1background" src="foto4between.png" alt="foto 4 entre informacoes">
+</section>
+
+<section class="section8">
+    <h3>CONTATO</h3>
+    <p>Entre em contato comigo por e-mail.</p>
+
+    <div class="contact-info">
+        <div>
+            <span style="margin-right: 4px;" class="material-symbols-outlined">
+                mail
+            </span>
+            <span>jcgs.contato@gmail.com</span>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <input type="text" placeholder="Nome (requerido)">
+        <input type="email" placeholder="E-mail (requerido)">
+        <textarea rows="4" placeholder="Sua mensagem"></textarea>
+        <button>Enviar</button>
+    </div>
+</section>
+
+
+<script>
+    function redirecionar() {
+        let opcao = document.getElementById("opcao").value;
+        if (opcao) {
+            window.location.href = opcao;
+        }
     }
+</script>
 
-    .text1 {
-        font-family: Arial;
-        color: white;
-        font-size: 40px;
-    }
-    
-    .text2 {
-        font-family: Arial;
-        color: white;
-    }
-    header {
-        width: 100%;  /* Ocupa toda a largura da tela */
-        height: 300px; /* Ajuste conforme necessário */
-        background-image: url('foto ceu principal.png');
-        background-size: cover;  /* Cobre toda a área sem distorcer */
-        background-position: center; /* Centraliza a imagem */
-    }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    .imgcontato {
-      position: absolute;
-      top: 24px;
-      left: 50px;
-    }
-    .imggetreal {
-      position: absolute;
-      bottom: 24px;
-      right: 50px;
-      width: 200px;
-      height: 200px;
-    }
-
-    .btn {
-      display: inline-block; /* Mantém como um botão */
-      padding: 10px 20px;
-      text-decoration: none; /* Remove sublinhado */
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 5px; /* Bordas arredondadas */
-      transition: 0.3s ease-in-out;
-    }
-
-    .atv {
-      background-color: #007bff; /* Azul */
-      color: white;
-      border: 2px solid #0056b3;
-      position: absolute;
-      left: 40px;
-      bottom: 500px;
-    }
-
-    .atv:hover {
-      background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
-    }
+<main>
+    <table>
+        <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+                
+        </tr>
+    </table>
+</main>
 
 
-
-
-    
-
-    .button1 {background-color: #0489aa;} /* Green */
-    </style>
-  <body style="background-color: #727272;">
-    <h2 class="text2"><center>
-      <header>
-        <img src="imagem nick e contato.png" class="imgcontato">
-      </header>
-      <hr>
-      <a class="btn atv" href="https://jocacgs.github.io/atv1dw/" target="_blank">
-        Atividade 1 Des. Web
-      </a>
-      
-
-      <img src="https://media1.tenor.com/m/d6XZhVcT1x4AAAAd/get-real-cat.gif" class="imggetreal"/>
-  </body>
+</body>
 </html>

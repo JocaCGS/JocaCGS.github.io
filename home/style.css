@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -8,46 +11,195 @@ body {
   text-align: center;
 }
 
+
+#bodyin {
+  background-image: url("foto1jocacgs.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Mantém a imagem fixa */
+  position: fixed; /* Fixa a div na tela */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Coloca a imagem atrás do conteúdo */
+  filter: blur(5px); /* Aplica o desfoque */
+}
+
 /* Cabeçalho */
 header {
-  background-color: #8f53ff;
+  background-color: #232323;
   color: white;
-  padding: 14px;
+  padding: 20px;
   display: flex;
-  justify-content: flex-end; /* Alinha o select para a direita */
+  justify-content: center; /* Alinha o select para a direita */
   padding-right: 20px;
 }
 
-/* Botão do menu */
-.atv {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
+#headeroptions {
+  color: white;
   text-decoration: none;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  color: #181818;
-  border: 2px solid #f5f5f5;
+  padding-right: 10px;
 }
 
-/* Seção principal */
-main {
-  padding: 20px;
+.headeroptionsmateria {
+  appearance: none; /* Removes default styling */
+  -webkit-appearance: none; /* Safari/Chrome */
+  -moz-appearance: none; /* Firefox */
+  background-color: #232323; /* Ensures a clean look */
+  border: none; /* Removes the border */
+  padding: 10px;
+  font-size: 16px;
+  width: 200px; /* Adjust width as needed */
+  cursor: pointer;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
 }
-/*
-section {
-  background: white;
-  padding: 30px;
-  margin: 160px auto;
-  border-radius: 10px;
-  max-width: 1000px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-wrap: wrap;
+
+/* Hides the arrow (for most browsers) */
+.headeroptionsmateria::-ms-expand {
+  display: none; /* Removes arrow in Internet Explorer */
+}
+
+
+
+.imgicone {
+  width: 15%;
+  height: auto;
+}
+
+.iconeEtexto {
   align-items: center;
-  justify-content: center;
+  display: flex;
+  gap: 4px;
 }
-*/
+
+
+.section1 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 0px 10px;
+}
+
+.texto-overlay {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+.section2 {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  background-color: white;
+  top: 800px;
+  padding: 30px 10px;
+}
+
+.section4 {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  background-color: rgb(0, 0, 0);
+  top: 1000px;
+  color: white;
+  padding: 30px 10px;
+}
+
+
+.section6 {
+  position: absolute;
+  width: 100%;
+  height: 650px;
+  background-color: white;
+  top: 2250px;
+  padding: 30px 10px;
+}
+
+
+.section8 {
+  top: 3200px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  padding: 30px 10px;
+}
+
+.section8h3 {
+  color: #ffffff;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.section8p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ff6666;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #ff4444;
+}
+
+
+.texto-overlay2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
 
 /* Imagem de perfil */
 .fotorosto {
@@ -58,22 +210,23 @@ section {
   margin-bottom: 20px;
 }
 
+.monitoricon {
+  margin-top: 30px;
+  width: 180px;
+  height: auto;
+}
+
+.projectsmonitor {
+  margin-top: 30px;
+  width: 300px;
+  height: auto;
+}
+
 /* Texto ao lado da imagem */
 .texto {
   max-width: 500px;
   text-align: left;
   padding-left: 70px;
-}
-
-/* Rodapé */
-/* Rodapé */
-footer {
-  background-color: #8f53ff;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
 }
 
 .imgbackground {
@@ -89,5 +242,13 @@ table {
     margin-left: auto;
     margin-right: auto;
     padding-top: 150px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
