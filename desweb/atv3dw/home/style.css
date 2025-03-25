@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* flex-direction: column; */
+    min-height: 100vh;
+    /* box-sizing: border-box; */
+}
+
+main {
+    flex: 1; /* Allow main content to expand and push the footer down */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background: linear-gradient(to right, darkblue, lightblue);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+#header-logo {
+    height: 80%;
+    border-radius: 50%;
+}
+
+#headermaintext {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    font-size: 3vw; /* Responsive font size */
+    color: white;
+    text-shadow: 3px 3px 0px black;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap; /* Allows images to wrap on small screens */
+    padding: 20px;
+}
+
+.mainimages {
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px blue;
+    width: 30vw; /* Responsive image size */
+    max-width: 400px; /* Ensures images don't get too big */
+    height: auto; /* Maintain aspect ratio */
+}
+
+footer {
+    background: linear-gradient(to right, darkblue, lightblue);
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 3px 3px 0px black;
+}
+
+#footermaintext {
+    font-size: 1.5vw; /* Responsive font size */
+}
+
+@media (max-width: 768px) {
+    #headermaintext {
+        font-size: 8vw; /* Larger text on small screens */
+    }
+
+    .mainimages {
+        width: 80%; /* Larger images on small screens */
+    }
+
+    #footermaintext {
+        font-size: 3vw; /* Adjust footer text for smaller screens */
+    }
+}
+
+ /* eu fiz uma parte da atividade mas tava ficando acabado em moonitores diferentes e pedi pro gpt arrumar pra funcionar em  qualauer monitor
+ mas tem muita coisa que me deixa com duvidas */

@@ -1,0 +1,13 @@
+header {
+    background-color: #e1e1e1;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+body {
+  margin: 0px;
+}
+
+.changeonhover:hover{
+    opacity: 0.8;
+}
