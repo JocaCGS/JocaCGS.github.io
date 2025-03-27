@@ -1,26 +1,11 @@
-body{
-    margin: 0px;
-    padding: 0px;
-}
-
 header {
-    height: 10vh;
-    display: flex;
-    position: relative;
-    padding: 0 20px;
-}
-
-#headermaintext {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
     color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px salmon, 0 0 5px orange ;
+    text-shadow: 1px 1px 0px black, 0 0 4px salmon;
+    text-align: center;
+    font-size: 60px;
 }
 
-div {
+section {
     height: 600px;
     display: grid;
     grid-template-columns: 400px 400px 400px 400px; 
@@ -28,16 +13,22 @@ div {
     justify-content: center;
     gap: 10px;
     row-gap: 200px;
+    margin-top: 100px;
+    margin-left: 120px;
 }
 
-div.grid {
+
+div {
+    width: 250px;
+    height: 200px;
+    background-color: lightsalmon;
     border-radius: 15px;
-    box-shadow: 4px 4px 3px #ffae79;
-    width: 300px;
-    height: 230px;
-    margin-top: 40%;
-    background-color: #ffe1c3;
+    box-shadow: 4px 4px 3px salmon;
+    overflow: hidden;
 }
-img {
-    float: none;
+.image {   
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+    opacity: 0;
 }
