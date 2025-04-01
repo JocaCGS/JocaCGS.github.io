@@ -31,10 +31,11 @@ div.corpo{
   display: inline-block;
 }
 
+
 .imagemopcao {
   position: relative;
   left: 15%;
-  top:30%;
+  top:13%;
   height: auto;
   width: 20%;
   border-radius: 15px;
@@ -63,4 +64,12 @@ footer.text {
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
+}
+
+h2.text {
+  font-size: 43px;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  text-align: center;
+  visibility: hidden;
 }

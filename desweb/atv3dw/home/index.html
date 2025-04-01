@@ -22,19 +22,42 @@
                 </table>
             </header>
             <div class="corpo">
-                <a href="https://jocacgs.github.io/desweb/atv3dw/carros/">
+                <h2 id="textoquemuda" class="text">a</h2>
+                <a href="https://jocacgs.github.io/desweb/atv3dw/carros/"
+                    onmouseover="mostranome('Carros')"
+                    onmouseout="escondenome()"
+                >
                     <img class="imagemopcao" src="carro.png" alt="">
                 </a>
-                <a href="https://jocacgs.github.io/desweb/atv3dw/motos/">
+                <a href="https://jocacgs.github.io/desweb/atv3dw/motos/"
+                    onmouseover="mostranome('Motos')"
+                    onmouseout="escondenome()"
+                >
                     <img class="imagemopcao" src="moto.png" alt="">
                 </a>
-                <a href="https://jocacgs.github.io/desweb/atv3dw/jetskis/">
-                    <img  class="imagemopcao" src="jetski.png" alt="">   
+                <a href="https://jocacgs.github.io/desweb/atv3dw/jetskis/"
+                    onmouseover="mostranome('Jetskis')"
+                    onmouseout="escondenome()"
+                >
+                    <img class="imagemopcao" src="jetski.png" alt="">
                 </a>
             </div>
             <footer class="text">
                 Desenvolvimento: Joaquim Colini
             </footer>
         </main>
+
+        <script>
+            function mostranome(nome) {
+                const novo_nome = document.getElementById('textoquemuda');
+                novo_nome.innerText = nome;
+                novo_nome.style.visibility = 'visible';
+            }
+
+            function escondenome() {
+                const nome = document.getElementById('textoquemuda');
+                nome.style.visibility = 'hidden';
+            }
+        </script>
     </body>
 </html>
