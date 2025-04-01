@@ -117,3 +117,62 @@ p.center-text {
     border-radius: 15px;
     padding: 18px;
 }
+
+
+
+
+div.lowres {
+    width: 100%;
+    justify-items: end;
+    display: none;
+}
+
+button.lowres {
+    width: 40px;
+    height: auto;
+    padding: 0%;
+}
+
+nav {
+    display: grid;
+    opacity: 0.5;
+    width: 30%;
+    height: 100vh;
+    padding: 10px;
+    position: fixed;
+    background-color: white;
+    visibility: hidden;
+    justify-items: center;
+    transition: opacity 0.5s ease;
+}
+
+
+a.lowres {
+    color: black;
+}
+
+select.lowres {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    font-size: 18px;
+    width: 45%;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+}
+select.lowres::-ms-expand {
+    display: none;
+}
+
+
+@media screen and (max-width: 640px) {
+    div.headeroptions {
+        display: none;
+    }
+
+    div.lowres {
+        display: grid;
+    }
+}

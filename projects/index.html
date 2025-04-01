@@ -10,12 +10,18 @@
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
-    <main>
         <div class="icon-text">
             <header>
                 <div class="icon-text">
                     <img class="iconimg" src="icone.png" alt="icon de um chapeu e uma barbicha">
                     JocaCGS
+                </div>
+                <div class="lowres">
+                    <button class="lowres">
+                        <span class="material-symbols-outlined">
+                            menu
+                        </span>
+                    </button>
                 </div>
                 <div class="headeroptions">
                     <a href="https://jocacgs.github.io/home/">Home</a>
@@ -29,6 +35,18 @@
                 </div>
             </header>
         </div>
+        <main>
+            <nav style="z-index: 2;">
+                <h2>Menu</h2>
+                <a class="lowres" href="https://jocacgs.github.io/home/">Home</a>
+                <a class="lowres" href="https://jocacgs.github.io/about-me/">About-me</a>
+                <a class="lowres" href="https://jocacgs.github.io/contact/">Contact</a>
+                <select class="lowres" id="opcao" onchange="redirecionar()">
+                    <option value="">Modules</option>
+                    <option value="https://jocacgs.github.io/desweb/">Desenvolvimento Web</option>
+                    <option value="https://jocacgs.github.io/redes/">Introdução à Redes</option>
+                </select>
+            </nav>
         <section class="center-text">
             <div class="center-text">
                 <h1>PROJECTS</h1>
