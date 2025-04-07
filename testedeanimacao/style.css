@@ -1,0 +1,23 @@
+.animtext1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-style: none;
+    font-size: 16px;
+}
+
+.animdiv1 {
+    background-color: wheat;
+    border: none;
+    width: 10px;
+    height: 100px;
+    animation: wide 2.4s ease-out forwards;
+} 
+
+@keyframes wide {
+    from {
+        width: 10px;
+    }
+    to {
+        width: 100px;
+    }
+  }

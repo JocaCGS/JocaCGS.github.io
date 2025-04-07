@@ -8,18 +8,10 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5; /*f5f5f5*/
     color: #333;
-}
-
-/*imagem de fundo e configuracoes*/
-div.image {
     background-image: url("background.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    z-index: -1;
-    filter: blur(5px);
-    height: 89vh;
-    position: relative;
 }
 
 div.icon-text {
@@ -32,6 +24,14 @@ div.icon-text {
 .iconimg {
     width: 6vh;
     height: 6vh;
+    animation: fadein 2.4s ease-out forwards;
+
+}
+
+
+.jocatext {
+    animation: fadein 2.4s ease-out forwards;
+
 }
 
 header {
@@ -42,6 +42,18 @@ header {
     width: 100%;
 }
 
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+
 div.headeroptions {
     border: none;
     padding: 10px;
@@ -50,6 +62,8 @@ div.headeroptions {
     color: white;
     font-family: 'Poppins', sans-serif;
     position: relative;
+    animation: fadein 2.4s ease-out forwards;
+
 }
 
 .headeroptionsmateria {
@@ -82,6 +96,8 @@ section.center-text {
     height: auto;
     position: relative;
     padding: 0px 10px;
+    animation: fadein 2.4s ease-out forwards;
+
 }
 
 div.center-text {
@@ -90,6 +106,8 @@ div.center-text {
     font-size: 100px;
     font-family: 'Poppins', sans-serif;
     z-index: 1;
+    animation: fadein 1s ease-out forwards;
+
 }
 
 div.center-text {
