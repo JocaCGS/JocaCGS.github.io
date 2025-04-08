@@ -1,0 +1,151 @@
+body {
+    display: grid;
+    grid-template-rows: 100px 80vh 100px;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+header {
+    grid-area: header;
+    background-color: darkblue;
+    display: grid;
+    justify-content: center;
+    color: coral;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.header {
+    background-color: white;
+    width: 95vw;
+    height: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50vh;
+    justify-content: center;    
+}
+span {
+    position: relative;
+    top: 40%;
+}
+
+main {
+    grid-area: main;
+    background-color: darkblue;
+    display: grid;
+    grid-template-rows: 100px auto;  
+    justify-content: center;
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: darkblue;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: white;
+    height: 500px;
+    width: 1400px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: white;
+    color: darkblue;
+    padding: 20px;
+    text-align: center;
+}
+div.cabeca {
+    color: darkred  ;
+}
+
+div.linhazul {
+    background-color: lightblue;
+}
+
+div.aga1 {
+    background-color: darkblue;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    position: relative;
+    top: -30px;
+    height: px;
+}
+
+.anime{
+    width: 50px;
+    height: 100px;
+    position: relative;
+    animation-name: aviao;
+    animation-duration: 4s;
+    animation-direction: foward;
+    animation-iteration-count: infinite;
+    transform: rotate(90deg);
+
+}
+
+
+.anime2{
+    width: 50px;
+    height: 100px;
+    position: relative;
+    animation-name: aviao2;
+    animation-duration: 4s;
+    animation-direction: foward;
+    animation-iteration-count: infinite;
+    float: right;
+    transform: rotate(-90deg);
+}
+
+@keyframes aviao {
+    0% {left:0px;}
+    50% {left:650px; transform: rotate(-90deg);}
+    100% {left :0px;}
+}
+
+@keyframes aviao2 {
+    0% {right:0px;}
+    50% {right:650px; transform: rotate(90deg);}
+    100% {right:0px;}
+}
+
+
+@media screen and (max-width: 800px) {
+    .colunalowres {
+        display: none;
+    }
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: white;
+        height: 500px;
+        width: 100px;
+    }
+    
+    .grid-item {
+        width: 200px;
+    }
+}
+
+
+    

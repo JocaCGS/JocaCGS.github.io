@@ -1,0 +1,122 @@
+a.style {
+    text-decoration: none;
+    margin-left: 200px;
+}
+
+img.image {
+    width: 800px;
+    height: 780px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-areas:
+    'nav main';
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    overflow: hidden;
+
+}
+
+main {
+    background-image: cover ;
+    overflow: hidden;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 37px;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: coral;
+}
+
+p {
+    color: darkred;
+}
+
+.authbutton {
+    background-color: darkblue;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+}
+
+.textbox {
+    width: 100%;
+    height: 25px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-top: 0px;
+    border-right: 0px;
+}
+
+
+div.div1 {
+    position: relative;
+    top: 20%;
+    color: darkred;
+    padding: 40px;
+}
+
+.icones {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-left: 80px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+hr {
+    background-color: black;
+}
+
+#line {
+    background-color: green;
+    color: green;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        display: none;
+    }
+
+    div.div1 {
+        padding: 10 px;
+    }
+
+    
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'nav';
+        margin: 0;
+        padding: 0;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .icones {
+        margin-left: 40px;
+    }
+
+    a.style {
+        text-decoration: none;
+        margin-left: 100px;
+    }
+}
