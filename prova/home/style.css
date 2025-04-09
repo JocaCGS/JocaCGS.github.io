@@ -1,0 +1,297 @@
+body {
+    display: grid;
+    grid-template-rows: 101px 75vh 110px;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+header {
+    grid-area: header;
+    background-color: darkblue;
+    display: grid;
+    justify-content: center;
+    color: coral;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.header {
+    background-color: white;
+    width: 95vw;
+    height: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50vh;
+    justify-content: center;    
+}
+span {
+    position: relative;
+    top: 40%;
+}
+
+main {
+    grid-area: main;
+    background-color: darkblue;
+    display: grid;
+    grid-template-rows: 100px auto;  
+    justify-content: center;
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+hr {
+    position: absolute;
+    top: -4%;
+    left: -10%;
+    height: 1px;
+    width: 1560px;
+    color: white;
+}
+
+footer {
+    grid-area: footer;
+    background-color: darkblue;
+    height: 150px;
+}
+
+.grid-container {
+    display: grid;
+    position: absolute;
+    top: 27%;
+    grid-template-columns: auto auto auto auto;
+    background-color: white;
+    height: 480px;
+    width: 1431px;
+    padding: 10px;
+    background-color: white;
+}
+
+.grid-item {
+    background-color: white;
+    color: darkblue;
+    padding: 20px;
+    text-align: center;
+}
+div.cabeca {
+    color: darkred  ;
+}
+
+div.linhazul {
+    background-color: lightblue;
+}
+
+div.aga1 {
+    background-color: darkblue;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    position: relative;
+  
+    height: px;
+}
+
+.anime{
+    width: 50px;
+    height: 100px;
+    position: relative;
+    animation-name: aviao;
+    animation-duration: 4s;
+    animation-direction: foward;
+    animation-iteration-count: infinite;
+    transform: rotate(90deg);
+
+}
+
+
+.anime2{
+    width: 50px;
+    height: 100px;
+    position: relative;
+    animation-name: aviao2;
+    animation-duration: 4s;
+    animation-direction: foward;
+    animation-iteration-count: infinite;
+    float: right;
+    transform: rotate(-90deg);
+}
+
+@keyframes aviao {
+    0% {left:0px;}
+    50% {left:650px; transform: rotate(-90deg);}
+    100% {left :0px;}
+}
+
+@keyframes aviao2 {
+    0% {right:0px;}
+    50% {right:650px; transform: rotate(90deg);}
+    100% {right:0px;}
+}
+
+@media screen and (max-width: 800px) {
+
+    .colunalowres {
+        display: none;
+    }
+
+    header {
+        display: grid; 
+        grid-area: header;
+        background-color: darkblue;
+        color: coral;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+    }
+
+    div.header {
+        background-color: white;
+        width: 95vw;
+        height: 80px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 5vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    span {
+        position: static;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    img {
+        width: 70px;
+    }
+
+    main {
+        grid-area: main;
+        background-color: darkblue;
+        display: grid;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        color: white;
+        padding: 10px;
+        margin-bottom: 10x; 
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    hr {
+        width: 90vw;
+        position: relative;
+        left: 0;
+        margin: 10px auto;
+        color: white;
+        height: 1px;
+    }
+
+    svg:hover {
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px;
+        background-color: white;
+        width: 95vw;
+        padding: 10px;
+        gap: 10px;
+        position: relative;
+        top: 10%;
+        margin: 0 auto;
+        height: auto;
+        box-sizing: border-box;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .grid-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    div.aga1 {
+        background-color: darkblue;
+        color: white;
+        grid-column: 1 / -1;
+        position: relative;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+  
+
+    @keyframes aviao {
+        0% {left:0px;}
+        50% {left:150px; transform: rotate(-90deg);}
+        100% {left :0px;}
+    }
+    
+    @keyframes aviao2 {
+        0% {right:0px;}
+        50% {right:150px; transform: rotate(90deg);}
+        100% {right:0px;}
+    }
+
+
+    footer {
+        height: 150px;
+    }
+    
+}
+
+@media screen and (min-width: 1500px) {
+    .grid-container {
+        margin-left: 200px;
+    }
+    hr {
+        width: 112%;
+        margin-right: 200px;
+    }
+
+    
+    @keyframes aviao {
+        0% {left:0px;}
+        50% {left:800px; transform: rotate(-90deg);}
+        100% {left :0px;}
+    }
+    
+    @keyframes aviao2 {
+        0% {right:0px;}
+        50% {right:800px; transform: rotate(90deg);}
+        100% {right:0px;}
+    }
+}
+    
+
+
+
+    
+
+
+
+
+    
