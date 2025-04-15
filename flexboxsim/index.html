@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flexbox Simulator</title>
+</head>
+
+
+<body>
+    <nav class="flex-container">
+        
+        <div class="divzero">
+            <h1 style="font-size: 30px;">SIMULADOR</h1>
+            <h1 style="font-size: 25px;">Flexbox</h1>
+        </div>
+
+
+        <div class="divum">
+            <p style="font-size: 20px;"><strong> Preenchimento</strong></p>
+            <a href="#" onclick="">
+                <div id="quadradinho1"></div>
+            </a>
+            <a href="#" onclick="">
+                <div id="quadradinho2"></div>
+            </a>
+            <a href="#" onclick="">
+                <div id="quadradinho3"></div>
+            </a>
+            <a href="#" onclick="">
+                <div id="quadradinho4"></div>
+            </a>
+            <a href="#" onclick="">
+                <div id="quadradinho5"></div>
+            </a>
+            <a href="#" onclick="">
+                <div id="quadradinho6"></div>
+            </a>
+        </div>
+
+
+        <div class="divdois">
+            <p style="font-size: 20px;"><strong> Formato</strong></p>
+            <a href="#" onclick="">
+                <div id="formato1"></div>
+            </a>
+            <a href="#" onclick="">
+                <div id="formato2"></div>
+            </a>
+        </div>
+
+        <div class="divtres">
+            <p style="font-size: 20px;"><strong> Tamanho</strong></p>
+            <input class="caixatexto" type="text">
+        </div>
+
+        <div class="divquatro">
+            <p style="font-size: 20px;"><strong> Alinhamento</strong></p>
+            <select class="caixaselecao" name="" id="">
+                <option value="">FLEX-DIRECTION</option>
+                <option value="">row</option>
+                <option value="">row-reverse</option>
+                <option value="">column</option>
+                <option value="">column-reverse</option>
+            </select>
+
+            
+            <select class="caixaselecao" name="" id="">
+                <option value="">JUSTIFY-CONTENT</option>
+                <option value="">center</option>
+                <option value="">flex-start</option>
+                <option value="">flex-end</option>
+                <option value="">space-around</option>
+                <option value="">space-between</option>
+            </select>
+
+            <select class="caixaselecao" name="" id="">
+                <option value="">ALIGN-ITEMS</option>
+                <option value="">center</option>
+                <option value="">flex-start</option>
+                <option value="">flex-end</option>
+                <option value="">stretch</option>
+                <option value="">baseline</option>
+            </select>
+        </div>
+    </nav>
+
+    <main>
+        <div class="divmainum">1</div>
+        <div class="divmaindois">2</div>
+        <div class="divmaintres">3</div>
+    </main>
+
+</body>
+<script src="./script.js"></script>
+</html>
