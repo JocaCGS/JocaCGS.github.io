@@ -20,40 +20,41 @@
 
         <div class="divum">
             <p style="font-size: 20px;"><strong> Preenchimento</strong></p>
-            <a href="#" onclick="">
-                <div id="quadradinho1"></div>
+            <a href="#" onclick="clickColor(0)">
+                <div id="quadradinho1" class="color-option" style="background-color: violet;"></div>
             </a>
-            <a href="#" onclick="">
-                <div id="quadradinho2"></div>
+            <a href="#" onclick="clickColor(1)">
+                <div id="quadradinho2" class="color-option" style="background-color: lightsalmon;"></div>
             </a>
-            <a href="#" onclick="">
-                <div id="quadradinho3"></div>
+            <a href="#" onclick="clickColor(2)">
+                <div id="quadradinho3" class="color-option" style="background-color: lightblue;"></div>
             </a>
-            <a href="#" onclick="">
-                <div id="quadradinho4"></div>
+            <a href="#" onclick="clickColor(3)">
+                <div id="quadradinho4" class="color-option" style="background-color: lightyellow;"></div>
             </a>
-            <a href="#" onclick="">
-                <div id="quadradinho5"></div>
+            <a href="#" onclick="clickColor(4)">
+                <div id="quadradinho5" class="color-option" style="background-color: orange;"></div>
             </a>
-            <a href="#" onclick="">
-                <div id="quadradinho6"></div>
+            <a href="#" onclick="clickColor(5)">
+                <div id="quadradinho6" class="color-option" style="background-color: lightgreen;"></div>
             </a>
+            
         </div>
 
 
         <div class="divdois">
             <p style="font-size: 20px;"><strong> Formato</strong></p>
-            <a href="#" onclick="">
+            <a href="#" onclick="clickFormat(0)">
                 <div id="formato1"></div>
             </a>
-            <a href="#" onclick="">
+            <a href="#" onclick="clickFormat(1)">
                 <div id="formato2"></div>
             </a>
         </div>
 
         <div class="divtres">
             <p style="font-size: 20px;"><strong> Tamanho</strong></p>
-            <input class="caixatexto" type="text">
+            <input class="caixatexto" type="text" onkeydown="verificarTamanho(event)">
         </div>
 
         <div class="divquatro">
@@ -88,10 +89,11 @@
     </nav>
 
     <main>
-        <div class="divmainum">1</div>
-        <div class="divmaindois">2</div>
-        <div class="divmaintres">3</div>
+        <div id="divmainum" class="divmainum">1</div>
+        <div id="divmaindois" class="divmaindois">2</div>
+        <div id="divmaintres" class="divmaintres">3</div>
     </main>
+    
 
 </body>
 <script src="./script.js"></script>
