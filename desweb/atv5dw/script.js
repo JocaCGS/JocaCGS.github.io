@@ -65,36 +65,38 @@ function alterarTamanho(valor) {
 }
 
 
+// Função para lidar com a mudança dos selects
+function alterarAlinhamento() {
+    const flexDirection = document.querySelector('select[name="flex-direction"]').value;
+    const justifyContent = document.querySelector('select[name="justify-content"]').value;
+    const alignItems = document.querySelector('select[name="align-items"]').value;
 
+    // Aplica as propriedades ao main
+    const main = document.querySelector('main');
 
+    // Altera o FLEX-DIRECTION
+    if (flexDirection) {
+        main.style.setProperty('flex-direction', flexDirection);
+    } else {
+        main.style.removeProperty('flex-direction');
+    }
 
+    // Altera o JUSTIFY-CONTENT
+    if (justifyContent) {
+        main.style.setProperty('justify-content', justifyContent);
+    } else {
+        main.style.removeProperty('justify-content');
+    }
 
+    // Altera o ALIGN-ITEMS
+    if (alignItems) {
+        main.style.setProperty('align-items', alignItems);
+    } else {
+        main.style.removeProperty('align-items');
+    }
+}
 
-
-
-// const colors = ['violet', 'lightsalmon', 'lightblue', 'lightyellow']
-// var index_color = 0;
-// const formats = ['0%', '50%']
-// var index_format = 0;
-
-// function clickColor(val) {
-//     var box, boxes;
-//     if (val != index_color) {
-//         //remove class
-
-//         box = document.querySelector('#box'+index_color);
-//         box.classList.remove("border");
-
-//         // add class
-
-//         box = document.querySelector('#box'+index_color);
-//         box.classList.add("border");
-
-
-//         // change format color
-//         box = document.querySelector('#format0');
-//         box.style.setProperty('background-color', colors[index_color])
-//         box = document.querySelector('#format1');
-//         box.style.setProperty('background-color', colors[index_color])
-//     }
-// }
+// Adicionando event listeners para os selects
+document.querySelectorAll('.caixaselecao').forEach(select => {
+    select.addEventListener('change', alterarAlinhamento);
+});
