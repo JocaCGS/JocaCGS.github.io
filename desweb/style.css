@@ -1,54 +1,92 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
     display: flex;
-    height: 100vh;
-    margin: 0;
 }
-#menu {
-    width: 20%;
-    background: #f0f0f0;
-    padding: 10px;
+
+nav {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    overflow-y: auto;  /* Allow vertical scrolling */
 }
-#viewer {
-    border-radius: 5%;
-    border-width: 5px;
-    border-color: rgb(185, 185, 185);
-    border-style: dashed;
-    width: 120vh;
-    height: 80vh;
+
+nav > h3 {
+    margin: 10px;
 }
-#homebutton {
-    margin-top: 10px;
-    margin-bottom: 70px;
-    border: none;
+
+.nav-headerbody {
+    display: flex;
 }
+
+.nav-header1 {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.nav-header2 {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+#home {
+    width: 40px;
+}
+
 #selectionbuttons {
     width: 100%;
     padding: 10px;
-    margin-bottom: 5px;
-    margin-top: 10px;
     border-radius: 15px;
     border-style: solid;
     border-color: gray;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-#texthome {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-button:hover {
+#selectionbuttons:hover {
     background-color: lightgrey;
 }
-
-button:active {
+#selectionbuttons:active {
     background-color: rgb(182, 182, 182);
+}
+
+a {
+    margin: 10px;
+}
+
+main {
+    flex: 8;
+}
+
+main > h1 {
+    margin: 20px;
+}
+
+main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#viewer {
+    width: 100%;
+    max-width: 900px;
+    height: 650px;
+    max-height: 100%;
+    border-radius: 15px;
+    border: solid;
+    border-color: lightgray;
 }
