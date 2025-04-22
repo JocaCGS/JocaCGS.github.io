@@ -1,0 +1,92 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+nav {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    overflow-y: auto;  /* Allow vertical scrolling */
+}
+
+nav > h3 {
+    margin: 10px;
+}
+
+.nav-headerbody {
+    display: flex;
+}
+
+.nav-header1 {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.nav-header2 {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+#home {
+    width: 40px;
+}
+
+#selectionbuttons {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: gray;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#selectionbuttons:hover {
+    background-color: lightgrey;
+}
+#selectionbuttons:active {
+    background-color: rgb(182, 182, 182);
+}
+
+a {
+    margin: 10px;
+}
+
+main {
+    flex: 8;
+}
+
+main > h1 {
+    margin: 20px;
+}
+
+main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#viewer {
+    width: 100%;
+    max-width: 900px;
+    height: 650px;
+    max-height: 100%;
+    border-radius: 15px;
+    border: solid;
+    border-color: lightgray;
+}

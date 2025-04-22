@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JocaCGS - Desenvolvimento Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-headerbody">
+            <div class="nav-header1">
+                <h1>JocaCGS</h1>
+            </div>
+            <div class="nav-header2">
+                <button id="home" value="https://jocacgs.github.io/home/" onclick="gohome()">
+                    <span class="material-symbols-outlined">home</span>
+                </button>
+            </div>
+        </div>
+        <h3>Desenvolvimento Web</h3>
+
+        <h3>Atividade 1</h3>
+        <a href="https://jocacgs.github.io/desweb/atv1dw/">Ir para a atividade</a>
+            <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/desweb/atv1dw/')">Visualizar</button>
+
+        <h3>Atividade 2</h3>
+        <a href="https://jocacgs.github.io/desweb/atv2dw/home/">Ir para a atividade</a>
+        <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/desweb/atv2dw/home/')">Visualizar</button>
+
+        <h3>Atividade 3</h3>
+        <a href="https://jocacgs.github.io/desweb/atv3dw/home/">Ir para a atividade</a>
+        <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/desweb/atv3dw/home/')">Visualizar</button>
+
+        <h3>Atividade 4</h3>
+        <a href="https://jocacgs.github.io/home/">Ir para a atividade</a>
+        <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/home/')">Visualizar</button>
+
+        <h3>Atividade 5</h3>
+        <a href="https://jocacgs.github.io/flexboxsim/">Ir para a atividade</a>
+        <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/flexboxsim/')">Visualizar</button>
+
+        <h3>Atividade 6</h3>
+        <a href="https://jocacgs.github.io/home/">Ir para a atividade</a>
+        <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/home/')">Visualizar</button>
+    </nav>
+
+    <main>
+        <h1>Visualizador</h1>
+        <div>
+            <iframe id="viewer" src=""></iframe>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
