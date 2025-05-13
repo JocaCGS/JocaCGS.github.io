@@ -5,30 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Space Invaders</title>
 </head>
-<body onload="playerMovement()">
+<body>
     <main>
+      
         <div class="stats">
             <div class="statsleft">
-                <img class="statsimg" src="images/clock.png" alt="">
-                <img class="statsimg" src="images/nave.png" alt="">
-                <img class="statsimg" src="images/alien.png" alt="">
+                <img class="statsimg" src="images/clock.png" alt="Relógio">
+                <img class="statsimg" src="images/nave.png" alt="Nave">
+                <img class="statsimg" src="images/alien.png" alt="Alien">
             </div>
             
             <div class="statsright">
-                <span ><div id="timer">00:00:00</div></span>
-                <span id="">LIFE: 3</span>
-                <span id="">ALIEN: 0</span>
+                <span><div id="timer">00:00:00</div></span>
+                <div id="lifeCount">LIFE: </div>
+                <div id="alienCount">ALIEN: 0</div>
             </div>
         </div>
 
-        <div id="player">
-            <span id="rocketObj"><img class="rocket" src="images/missil.png" alt=""></span>
-            <img class="playerimg" src="images/nave.png" alt="">
-            <span id="rocketObj"><img class="rocket" src="images/missil.png" alt=""></span>
+        <div id="alien1">
+            <img class="alienimg" src="images/alien.png" alt="">
         </div>
-    </main>
+        <div id="alien2">
+            <img class="alienimg" src="images/alien.png" alt="">
+        </div>
+        <div id="alien3">
+            <img class="alienimg" src="images/alien.png" alt="">
+        </div>
+
+
+
+
+        <div id="player">
+            <span id="rocketLeft" class="rocketObj"><img class="rocket" src="images/missil.png" alt=""></span>
+            <img class="playerimg" src="images/nave.png" alt="Nave do jogador">
+            <span id="rocketRight" class="rocketObj"><img class="rocket" src="images/missil.png" alt=""></span>
+        </div>
+
+        <div id="pausedMessage">GAME PAUSED</div>
+        <div id="lostMessage">ROUND LOST</div>
+        <div id="gameOverMessage">GAME OVER</div>
+        </main>
+
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>

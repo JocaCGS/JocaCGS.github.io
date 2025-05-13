@@ -25,7 +25,7 @@ main {
     height: 200px;
 }
 
-.statsleft{
+.statsleft {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,15 +34,13 @@ main {
     gap: 10px;
 }
 
-
-.statsright{
+.statsright {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 50%;
     gap: 30px;
-
 }
 
 .statsimg {
@@ -55,31 +53,121 @@ main {
     position: absolute;
     bottom: 0%;
     left: 50%;
-    transform: translateX(50%);
+    transform: translateX(-50%);
     margin: 0;
     padding: 0;
 }
 
-
-.playerimg {
-    margin: 0;
-    padding: 0;
-    width: 80px;
-    height: 90px;
-    margin-bottom: 20px ;
-    margin: 10px;
-}
-
-.rocket{
+.rocket {
     width: 10px;
     height: 60px;
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
     margin-left: -4px;
 }
 
-#rocketObj {
-    background-color: red;
+.rocketObj {
     position: absolute;
-    bottom: 0%;
-    transition: bottom 0.1s linear;
+    bottom: 0px;
+    transition: bottom 0.05s linear;
 }
+
+#rocketLeft {
+    left: 30%;
+    z-index: 10;
+}
+
+#rocketRight {
+    left: 70%;
+    z-index: 10;
+}
+
+.playerimg {
+    width: 80px;
+    height: 90px;
+    margin: 10px;
+}
+
+#pausedMessage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#lostMessage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#gameOverMessage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#alien1 {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-30%);
+    z-index: 5;
+}
+
+#alien2 {
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+}
+
+#alien3 {
+    
+    position: absolute;
+    left: 70%;
+    transform: translateX(-70%);
+    z-index: 5;
+
+}
+
+
+.alienimg {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+#rocketLeft, #rocketRight {
+    position: absolute;
+    bottom: 0;
+    transition: none;
+    display: block; /* Garante visibilidade */
+}
+
