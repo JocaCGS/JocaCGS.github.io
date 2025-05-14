@@ -3,10 +3,18 @@ let tempoAtivo = true;
 let movimentoAtivo = true;
 let foguetesAtivos = true;
 let alienAtivo = true;
+let faseAtual = 1;
+let alien1Interval, alien2Interval, alien3Interval;
+let proximaFaseEmAndamento = false;
+
 
 var alienCount = 0;
 var lifeCount = 3;
 
+let gameSpeed = 0.5;
+
+
+const nextRoundMessage = document.getElementById("nextRoundMessage");
 const timerElement = document.getElementById('timer');
 const pausedMessage = document.getElementById('pausedMessage');
 const lostMessage = document.getElementById('lostMessage');
@@ -38,6 +46,7 @@ setInterval(atualizarTimer, 1000);
 
 // Função de pausa e retomada
 function togglePause() {
+
     tempoAtivo = !tempoAtivo;
     movimentoAtivo = !movimentoAtivo;
     foguetesAtivos = !foguetesAtivos;
@@ -57,9 +66,11 @@ function resumeGame() {
 }
 
 document.addEventListener("keydown", function(event) {
-    if (event.key === 'b' || event.key === 'B') {
+    if (proximaFaseEmAndamento) return; // PARA QUESTÕES DE TESTE, PODE-SE RETIRAR PARA APERTAR P PARA PULAR DE FASE AO VENCER 1 RODADA.
+
+    if (event.key === 'p' || event.key === 'P') {
         togglePause();
-    } else if (event.key === 'r' || event.key === 'R') {
+    } else if (event.key === ' ' || event.key === ' ') {
         resumeGame();
     }
 });
@@ -94,6 +105,8 @@ function shootRockets() {
             rocketRight.style.bottom = "0px";
             rocketLeftDone = false;
             rocketRightDone = false;
+            rocketLeft.style.display = "block";
+            rocketRight.style.display = "block";
         }
     }
 
@@ -116,6 +129,7 @@ function shootRockets() {
             }
 
             toggleSide = !toggleSide;
+
         }
     });
 }
@@ -136,6 +150,7 @@ function launchRocket(rocketElement, callback) {
 }
 
 window.onload = () => {
+    window.alert("A / D - Mover-se ~~ P / Space - Pausar / Voltar / Continuar")
     movePlayer();
     shootRockets();
     defCounters();
@@ -144,23 +159,38 @@ window.onload = () => {
 var isLost = false;
 
 // Movimento dos aliens
-function alienMovement(alienElement) {
+function alienMovement(alienElement, intervalRef) {
     let top = -150;
     let topgear = 0;
-    const maxHeight = window.innerHeight; // altura máxima da tela em pixels
-    
+    const maxHeight = window.innerHeight;
+
     const interval = setInterval(() => {
+        if (!alienAtivo) return;
+
         if (topgear >= maxHeight - 100) {
             clearInterval(interval);
             isLost = true;
             lostRound();
         } else {
-            top += 0.5; // velocidade
-            topgear += 0.5;
+            top += gameSpeed;
+            topgear += gameSpeed;
             alienElement.style.top = top + "px";
         }
     }, 10);
+
+    // Salva o ID do intervalo na variável certa
+    if (intervalRef === 'alien1') alien1Interval = interval;
+    if (intervalRef === 'alien2') alien2Interval = interval;
+    if (intervalRef === 'alien3') alien3Interval = interval;
 }
+
+
+function stopAlienMovements() {
+    clearInterval(alien1Interval);
+    clearInterval(alien2Interval);
+    clearInterval(alien3Interval);
+}
+
 
 function resetAlienPosition(alienElement) {
     alienElement.style.top = "-150px"; // Reseta a posição
@@ -185,16 +215,18 @@ function tryAgain() {
         togglePause();
     }
 
+    stopAlienMovements();
+
     // Reposiciona os aliens antes de começar a movimentação novamente
     resetAlienPosition(alien1);
     resetAlienPosition(alien2);
     resetAlienPosition(alien3);
 
     // Re-inicia o movimento dos aliens
-    alienMovement(alien1);
-    alienMovement(alien2);
-    alienMovement(alien3);
-    
+    alienMovement(alien1, 'alien1');
+    alienMovement(alien2, 'alien2');
+    alienMovement(alien3, 'alien3');
+
     lostMessage.style.display = 'none';
 }
 
@@ -202,7 +234,7 @@ document.addEventListener("keydown", function(event) {
     if (isLost === false){
         return;
     }
-    if (event.key === 'l' || event.key === 'L') {
+    if (event.key === ' ' || event.key === ' ') {
         if(lifeCount === 1) {
             let textlifeCount = document.getElementById("lifeCount"); // Corrigido o método
             textlifeCount.textContent = "LIFE: 0"; // Atualiza o texto
@@ -213,6 +245,7 @@ document.addEventListener("keydown", function(event) {
 
         tryAgain();
         lifeCount--;
+        gameSpeed += 0.2;
         defCounters();
         isLost = false
     }
@@ -223,31 +256,110 @@ function defCounters() {
     textlifeCount.textContent = "LIFE: " + lifeCount; // Atualiza o texto
 }
 
-alienMovement(alien1);
-alienMovement(alien2);
-alienMovement(alien3);
 
-function colideComAlien() {
-    const elementos = [alien1, alien2, alien3];
-    const foguetes = [rocketLeft, rocketRight];
+alienMovement(alien1, 'alien1');
+alienMovement(alien2, 'alien2');
+alienMovement(alien3, 'alien3');
 
-    foguetes.forEach(rocket => {
-        const rocketRect = rocket.getBoundingClientRect();
 
-        elementos.forEach(alien => {
-            const alienRect = alien.getBoundingClientRect();
 
-            if (
-                rocketRect.left < alienRect.right &&
-                rocketRect.right > alienRect.left &&
-                rocketRect.top < alienRect.bottom &&
-                rocketRect.bottom > alienRect.top
-            ) {
-                alien.style.visibility = 'hidden';
-            }
-        });
+function colisao(elem1, elem2) {
+    const rect1 = elem1.getBoundingClientRect();
+    const rect2 = elem2.getBoundingClientRect();
+  
+    return !(
+      rect1.top > rect2.bottom ||
+      rect1.bottom < rect2.top ||
+      rect1.left > rect2.right ||
+      rect1.right < rect2.left
+    );
+  }
+  
+  let pontos = 0;
+  let pontosElement = document.getElementById("alienCount");
+  
+  function atualizarPontos(){
+    pontos++;
+    pontosElement.innerText = `ALIEN: ` + pontos;
+  }
+  function verificarColisao() {
+    const aliens = document.querySelectorAll('.aliens');
+  
+    aliens.forEach(alien => {
+      if(alien.style.display === "none"){return};
+      const  colisaoEsquerda = colisao(rocketLeft, alien);
+      const  colisaoDireita = colisao(rocketRight, alien);
+  
+      if (colisaoEsquerda || colisaoDireita){
+        alien.style.display = 'none';
+  
+        atualizarPontos();
+  
+        if(colisaoEsquerda){
+            rocketLeft.style.display = 'none';
+        } else if(colisaoDireita){
+            rocketRight.style.display = 'none';
+        }
+      }
     });
+
+    checkLevel();
+  }
+  
+  setInterval(() => {
+    if(tempoAtivo) {
+      verificarColisao();
+    }
+  }, 100);
+
+function checkLevel() {
+    const aliens = document.querySelectorAll('.aliens');
+    let qtdAlienDefeated = 0;
+    aliens.forEach(alien => {
+        if(alien.style.display === 'none') {
+            qtdAlienDefeated++;
+        }
+    })
+
+    if(qtdAlienDefeated === 3){
+        faseAtual++;
+        qtdAlienDefeated = 0;
+        proximaFaseEmAndamento = true;
+        nextLevel();
+    }
+}
+function nextLevel() {
+    tempoAtivo = false;
+    movimentoAtivo = false;
+    foguetesAtivos = false;
+    alienAtivo = false;
+
+    gameSpeed += 0.5;
+
+    nextRoundMessage.style.display = 'block';
+    document.body.style.backgroundImage = `url(images/background${faseAtual}.png)`;
+
+    setTimeout(() => {
+        tempoAtivo = true;
+        movimentoAtivo = true;
+        foguetesAtivos = true;
+        alienAtivo = true;
+        nextRoundMessage.style.display = 'none';
+    
+        proximaFaseEmAndamento = false; // <-- Libera para próxima fase no futuro
+        tryAgain();
+    }, 2000);
 }
 
+setInterval(() => {
+    if(tempoAtivo) {
+      if (faseAtual > 4){
+        tempoAtivo = !tempoAtivo;
+        movimentoAtivo = !movimentoAtivo;
+        foguetesAtivos = !foguetesAtivos;
+        alienAtivo = !alienAtivo;
+        nextRoundMessage.style.display = 'block';
+      }
+    }
+  }, 100);
 
-setInterval(colideComAlien, 50);

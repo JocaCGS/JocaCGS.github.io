@@ -5,7 +5,7 @@ html, body {
 
 body {
     display: flex;
-    background-image: url(images/background.png);
+    background-image: url(images/background1.png);
     object-fit: cover;
 }
 
@@ -102,6 +102,23 @@ main {
     z-index: 10;
 }
 
+
+#nextRoundMessage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+
 #lostMessage {
     display: none;
     position: absolute;
@@ -158,7 +175,8 @@ main {
 }
 
 
-.alienimg {
+
+.aliens {
     width: 200px;
     height: 200px;
     position: absolute;
