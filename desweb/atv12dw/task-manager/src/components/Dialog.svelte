@@ -2,6 +2,16 @@
 
 export let close_func;
 
+export let itemdata;
+
+function formataResposta(status){
+    if (status) {
+        return "Concluída"
+    } else {
+        return "Em andamento"
+    }
+}
+
 
 </script>
 
@@ -14,13 +24,14 @@ export let close_func;
                 </svg>
             </button>
         </div>
+
         <div class="content">
-            <span><b>ID: </b></span >
-			<span><b>TAREFA: </b></span>
-			<span><b>DESCRIÇÃO: </b></span> 
-			<span><b>PRIORIDADE: </b></span>
-			<span><b>PRAZO: </b></span>
-			<span><b>SITUAÇÃO: </b></span>
+            <span><b>ID: {itemdata.id}</b></span >
+			<span><b>TAREFA: {itemdata.tarefa}</b></span>
+			<span><b>DESCRIÇÃO: {itemdata.descricao}</b></span> 
+			<span><b>PRIORIDADE: {itemdata.prioridade}</b></span>
+			<span><b>PRAZO: {itemdata.prazo}</b></span>
+			<span><b>SITUAÇÃO: {formataResposta(itemdata.status)}</b></span>
         </div>
     </div>
 </main>
