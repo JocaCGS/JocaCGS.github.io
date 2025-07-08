@@ -29,7 +29,7 @@ html, body {
     flex-direction: column;
     display: flex;
     flex: 2;
-    gap: 10px;
+    gap: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -117,26 +117,6 @@ html, body {
 }
 
 
-
-
-.searchdiv{
-background-color: #1f1f1f;
-border: none;
-width: 350px;
-border-radius: 15px;
-height: 40px;
-display: flex;
-align-items: center;
-}
-
-
-.searchbox {
-background-color: #1f1f1f;
-height: 27px;
-border: none;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
 
 texarea:focus {
 outline: none;

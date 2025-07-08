@@ -1,0 +1,32 @@
+.searchdiv{
+    background-color: #1f1f1f;
+    border: none;
+    width: 350px;
+    border-radius: 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+    
+    
+.searchbox {
+    background-color: #1f1f1f;
+    height: 27px;
+    border: none;
+    width: 80%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.buttonsearch {
+    display: inline;
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 15px;
+    width: auto;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: larger;
+    color: white;
+}
