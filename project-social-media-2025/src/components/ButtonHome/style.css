@@ -9,4 +9,9 @@
     font-size: larger;
     color: white;
     font-weight: bold;
+    justify-content: center;
+}
+
+span {
+    margin-left: 10px;
 }
