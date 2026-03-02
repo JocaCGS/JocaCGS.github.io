@@ -11,8 +11,8 @@ body {
 #viewer {
     border-radius: 5%;
     border-width: 5px;
-    border-color: rgb(185, 185, 185);
-    border-style: dashed;
+    border-style: none;
+    margin: auto;
     width: 120vh;
     height: 80vh;
 }
@@ -53,10 +53,46 @@ button:active {
     background-color: rgb(182, 182, 182);
 }
 
+.visual {
+    display: flex;
+    flex: 6;
+}
 
-nav {
-    flex: 2;
+
+.nav-regular-res {
+    flex: 4;
     display: flex;
     flex-direction: column;
     overflow-y: auto;  /* Allow vertical scrolling */
+}
+
+.nav-lower-res {
+    flex: 6;
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;  /* Allow vertical scrolling */
+}
+
+
+@media screen and (max-width: 640px) {
+
+    
+.nav-regular-res {
+    display: none;
+}
+body {
+    flex-direction: column;
+}
+
+.nav-lower-res {
+    display: flex;
+}
+#viewer {
+    display: flex;
+    border-radius: 5%;
+    border-width: 5px;
+    border-style: none;
+    margin: auto;
+    flex: 6;
+}
 }
