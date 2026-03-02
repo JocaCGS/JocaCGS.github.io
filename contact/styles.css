@@ -65,7 +65,8 @@ div.headeroptions {
     font-family: 'Poppins', sans-serif;
     position: relative;
     animation: fadein 2.4s ease-out forwards;
-
+    display: flex;
+    align-items: center ;
 }
 
 .headeroptionsmateria {

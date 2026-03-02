@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JocaCGS - Introdução à Redes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    button:hover {
+        background-color: lightgrey;
+    }
+    button:active {
+        background-color: rgb(182, 182, 182);
+    }
+</style>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+<nav>
+    <h3>Linguagens</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/linguagens/')">Visualizar</button>
+    <br><br>
+    <h3>História (Geral e do Brasil)</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/historia/')">Visualizar</button>
+    <br><br>
+    <h3>Geografia</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/geografia/')">Visualizar</button>
+    <br><br>
+    <h3>Filosofia / Sociologia</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/filosociologia/')">Visualizar</button>
+    <br><br>
+    <h3>Biologia</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/biologia/')">Visualizar</button>
+    <br><br>
+    <h3>Física</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/fisica/')">Visualizar</button>
+    <br><br>
+    <h3>Quimica</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/quimica/')">Visualizar</button>
+    <br><br>
+    <h3>Matemática</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/matematica/')">Visualizar</button>
+    <br><br>
+    <h3>Redação</h3>
+    <button id="selectionbuttons" onclick="updateViewer('https://jocacgs.github.io/redacao/')">Visualizar</button>
+    <br><br></nav>
+</div>      
+
+<div style="margin: auto;">
+    <p style="font-size: 25px; margin-left: 500px;">Visualizador</p>
+    <iframe id="viewer" src=""></iframe>
+</div>
+
+<script>
+    function gohome() {
+        let home = document.getElementById("homebutton").value;
+        if (home) {
+            window.location.href = home;
+        }
+    }
+    function updateViewer(url) {
+        document.getElementById('viewer').src = url;
+    }
+</script>
+
+</body>
+</html>

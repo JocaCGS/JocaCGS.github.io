@@ -63,6 +63,8 @@ div.headeroptions {
     color: white;
     font-family: 'Poppins', sans-serif;
     position: relative;
+    display: flex;
+    align-items: center ;
 }
 
 .headeroptionsmateria {
